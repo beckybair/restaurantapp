@@ -167,12 +167,14 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = restaurant => {
   const li = document.createElement('li');
-  // li.className = 'crop-height flip';
+  li.role = 'link';
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = "picture of restaurant";
+  image.alt = "picture of restaurant " + restaurant.name;
+  image.setAttribute('aria-label', 'picture of restaurant ' + restaurant.name);
+  image.role = "presentation";
   li.append(image);
 
   const div = document.createElement('div');

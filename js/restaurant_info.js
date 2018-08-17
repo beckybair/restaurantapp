@@ -139,7 +139,9 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const reviewDiv = document.createElement('div');
   reviewDiv.className = 'reviews-details';
+  reviewDiv.setAttribute('role', 'presentation');
   const title = document.createElement('h3');
+  title.className = 'review-title';
   title.innerHTML = 'Reviews';
   reviewDiv.appendChild(title);
   container.appendChild(reviewDiv);
@@ -151,6 +153,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     return;
   }
   const ul = document.getElementById('reviews-list');
+  ul.setAttribute('role', 'group');
   reviews.forEach(review => {
     ul.appendChild(createReviewHTML(review));
   });

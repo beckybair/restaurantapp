@@ -18,10 +18,10 @@
   <header>
     <!-- Beginning nav -->
     <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+      <h1><a href="/" role="link">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" ><!-- aria labeling here ?? -->
+    <ul id="breadcrumb" >
       <li><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
@@ -34,21 +34,27 @@
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
       <h1 id="restaurant-name"></h1>
-      <div>
+      <div id="restaurant-img-div">
         <img id="restaurant-img" class="restaurant-img">
       </div>
       <p id="restaurant-cuisine"></p>
     </section>
     <section id="restaurant-address-hours">
       <div class="restaurant-details">
-        <p id="restaurant-address"></p><!-- aria labeling here ?? -->
         <!-- Beginning map -->
-        <section id="map-container"><!-- aria labeling here ?? -->
+        <section id="map-container">
           <div id="map"></div>
-        </section><!-- aria labeling here ?? -->
+        </section>
         <!-- End map -->
-        <div class="restaurant-hours">
-          <table id="restaurant-hours"></table><!-- aria labeling here ?? -->
+        <div class="restaurant-address-hours">
+          <div class="restaurant-address">
+            <h3 class="address-hours-title">Address</h3>
+            <p id="restaurant-address"></p>
+          </div>
+          <div class="restaurant-hours">
+            <h3 class="address-hours-title">Hours Open</h3>
+            <table id="restaurant-hours"></table>
+          </div>
         </div>
       </div>
     </section>
