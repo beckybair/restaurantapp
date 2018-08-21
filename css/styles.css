@@ -244,26 +244,11 @@ nav h1 a {
   /* padding: 0 0 25px; */
   /* max-width: 300px; */
 }
-@media only screen and (min-width: 0px) {
-  #restaurants-list li {
-    max-width: 100%;
-  }
-}
-@media only screen and (min-width: 714px) {
-  #restaurants-list li {
-    max-width: 45%;
-  }
-}
-@media only screen and (min-width: 1050px) {
-  #restaurants-list li {
-    max-width: 300px;
-  }
-}
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
   margin: 0;
-  max-width: 100%;
+  max-width: 270px;
   /* min-height: 248px; */
   min-width: 100%;
   overflow: hidden;
@@ -313,7 +298,7 @@ nav h1 a {
   border-bottom: 1px solid #d9d9d9;
   height: 330px;
   position: relative;
-  width: 50%;
+  width: 100%;
 }
 .inside #map {
   background-color: #ccc;
@@ -322,7 +307,7 @@ nav h1 a {
 }
 
 .inside .restaurant-address-hours {
-  width: 48%;
+  width: 100%;
 }
 .inside .address-hours-title {
   text-align: center;
@@ -352,7 +337,6 @@ nav h1 a {
 #restaurant-img {
   width: 100%;
   max-height: 600px;
-  margin-top: -40%;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -369,7 +353,7 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-  width: 800px;
+  max-width: 800px;
 }
 #restaurant-container,
 #restaurant-address-hours,
@@ -379,10 +363,11 @@ nav h1 a {
   padding: 20px 0;
   width: 100%;
 }
-.restaurant-details,
+.inside .restaurant-details,
 .reviews-details {
   margin: 0 20px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 .review-title {
@@ -419,4 +404,34 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 0px) {
+  #restaurants-list li {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 714px) {
+  #restaurants-list li {
+    max-width: 45%;
+  }
+  #restaurant-img {
+    margin-top: -40%;
+  }
+  .inside .restaurant-details,
+  .reviews-details {
+    flex-direction: row;
+  }
+  .inside #map-container {
+    width: 50%;
+  }
+  .inside .restaurant-address-hours {
+    width: 48%;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  #restaurants-list li {
+    max-width: 300px;
+  }
 }
