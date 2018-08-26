@@ -9,13 +9,13 @@ class DBHelper {
   static get DATABASE_URL() {
     const port = 8000; // Change this to your server port
     // return `http://localhost:${port}/data/restaurants.json`;
-    // return 'data/restaurants.json';
+    return 'data/restaurants.json';
 
-    // For non-local hosts
-    if (window.location.hostname !== 'localhost') {
-      return `${window.location.origin}/restuarants/data/restaurants.json`;
-    }
-    return `http://localhost:${port}/data/restaurants.json`;    
+    // // For non-local hosts
+    // if (window.location.hostname !== 'localhost') {
+    //   return `${window.location.origin}/restuarants/data/restaurants.json`;
+    // }
+    // return `http://localhost:${port}/data/restaurants.json`;    
   }
 
   /**
@@ -172,7 +172,10 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return `/img/${restaurant.photograph}`;
+    // to display pictures on Github pages
+    return `/restaurantapp/img/${restaurant.photograph}`;
+    // to display elsewhere
+    // return `/img/${restaurant.photograph}`;
   }
 
   /**
