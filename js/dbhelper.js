@@ -172,10 +172,7 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    // to display pictures on Github pages
-    return `./img/${restaurant.photograph}`;
-    // to display elsewhere
-    // return `/img/${restaurant.photograph}`;
+    return `/img/${restaurant.photograph}`;
   }
 
   /**
