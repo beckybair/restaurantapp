@@ -12,7 +12,7 @@ We were to alter the existing app for responsiveness, accessibility and service 
 
 
 ## Live Viewing
-Here is a link to view the site/app live:  
+Here is a link to view the site/app live:  https://beckybair.github.io/restaurantapp/
 
 ## Instructions
 _Run this on your device_
