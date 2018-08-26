@@ -12,7 +12,7 @@ class DBHelper {
 
 		// For non-local hosts
 		if (window.location.hostname !== 'localhost') {
-			return `${window.location.origin}/data/restaurants.json`;
+      return `${window.location.origin}/restaurantapp/data/restaurants.json`;
 		}
 		return 'data/restaurants.json';
 	}
