@@ -9,11 +9,12 @@ class DBHelper {
 	static get DATABASE_URL() {
 		const port = 5500; // Change this to your server port
 		// return `http://localhost:${port}/data/restaurants.json`;
-
+    console.log(window.location.hostname);
+    console.log(window.location.origin);
 		// For non-local hosts
-		if (window.location.hostname !== 'localhost') {
-      return `${window.location.origin}/restaurantapp/data/restaurants.json`;
-		}
+    // if (window.location.hostname !== 'https://github.com/') {
+    //   return `${window.location.origin}/restaurantapp/data/restaurants.json`;
+		// }
 		return 'data/restaurants.json';
 	}
 
